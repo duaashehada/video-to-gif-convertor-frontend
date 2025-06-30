@@ -1,0 +1,20 @@
+<div class="container">
+  <h2> Video to GIF Converter</h2>
+
+  <input type="file" (change)="onFileSelected($event)" /><br /><br />
+
+<!--  <label>FPS:</label>-->
+<!--  <input type="number" [(ngModel)]="fps" /><br />-->
+
+<!--  <label>Scale:</label>-->
+<!--  <input type="text" [(ngModel)]="scale" /><br /><br />-->
+
+  <button class="btn btn-primary" (click)="convert()" [disabled]="loading">Convert</button>
+
+  <div *ngIf="loading">⏳ Converting...</div>
+
+  <div *ngIf="gifUrl">
+    <h3> Result:</h3>
+    <img [src]="gifUrl" alt="GIF Preview" />
+  </div>
+</div>
