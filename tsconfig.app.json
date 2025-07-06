@@ -3,13 +3,17 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
-    "types": []
+//    "outDir": "./out-tsc/app",
+//    "types": ["node"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "files": [
     "src/main.ts"
   ],
   "include": [
     "src/**/*.d.ts"
-  ]
+  ],
+
 }

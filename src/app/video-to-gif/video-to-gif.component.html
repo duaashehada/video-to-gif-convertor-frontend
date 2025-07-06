@@ -1,0 +1,14 @@
+<h2>🎥 Convert Video to GIF</h2>
+
+<input type="file" (change)="onFileSelected($event)" accept="video/*" />
+<br /><br />
+<button [disabled]="loading || !selectedFile">
+  {{ loading ? '⏳ Converting...' : 'Convert to GIF' }}
+</button>
+
+<div *ngIf="gifUrl">
+  <h3>Preview</h3>
+  <img [src]="gifUrl" style="max-width: 480px;"  alt=""/>
+  <br />
+  <a [href]="gifUrl" download="converted.gif">Download GIF</a>
+</div>

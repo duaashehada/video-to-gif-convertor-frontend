@@ -37,7 +37,7 @@ export class ConvertComponent {
     formData.append('scale', this.scale);
 
     this.loading = true;
-    this.http.post<any>('https://video-to-gif-convertor-backend-production.up.railway.app/convert', formData).subscribe({
+    this.http.post<any>('https://video-to-gif-convertor-backend.onrender.com/convert', formData).subscribe({
       next: (res) => {
         this.gifUrl = this.sanitizer.bypassSecurityTrustUrl(res.gifUrl);
         this.loading = false;
